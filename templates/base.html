@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+
+	<title>Anna Scheppele's Portfolio</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="static/style.css">
+
+	<script>
+		function changecolor(){
+			var url = document.URL;
+			if (url.search("index") > 0){
+				document.getElementById("index").style.background = 'green';
+				document.getElementById("index").style.textTransform = 'uppercase';
+			}
+			else if (url.search("dogs") > 0){
+				document.getElementById("dogs").style.background = 'green';
+				document.getElementById("dogs").style.textTransform = 'uppercase';
+			}
+			else if (url.search("family") > 0){
+				document.getElementById("family").style.background = 'green';
+				document.getElementById("family").style.textTransform = 'uppercase';
+			}
+			else if (url.search("form") > 0){
+				document.getElementById("form").style.background = 'green';
+				document.getElementById("form").style.textTransform = 'uppercase';
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class = "nav nav-pill nav-justified">
+				<li><a id = "index" href = "index.html"> Home </a></li>
+				<li><a id = "dogs" href = "dogs.html"> Dogs </a></li>
+				<li><a id = "family" href = "family.html"> Family </a></li>
+				<li><a id = "form" href = "form.html">Login</a></li>
+			</ul>
+		</nav>
+
+		<script>
+			changecolor();
+		</script>
+
+		<div class = "headerimg">
+			<img id="trees" src="static/trees.jpg" alt="trees with ocean in background">
+			<h1> Anna Scheppele</h1>
+		</div>
+
+		{% block head %}
+		Put header info here
+		{% endblock %}
+		
+	</header>
+	{% block content %}
+	I should never see this content.  It should be replaced.
+	{% endblock %}
+	<footer> Copyright &copy; Anna Scheppele 2016.
+	</footer>
+
+
+</body>
+</html>
