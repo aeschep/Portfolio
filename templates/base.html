@@ -23,21 +23,22 @@
 	<script>
 		function changecolor(){
 			var url = document.URL;
-			if (url.search("index") > 0){
-				document.getElementById("index").style.background = 'green';
-				document.getElementById("index").style.textTransform = 'uppercase';
+			
+			if (url.search("aboutme") > 0){
+				document.getElementById("aboutme").style.background = 'green';
+				document.getElementById("aboutme").style.textTransform = 'uppercase';
 			}
-			else if (url.search("dogs") > 0){
-				document.getElementById("dogs").style.background = 'green';
-				document.getElementById("dogs").style.textTransform = 'uppercase';
-			}
-			else if (url.search("family") > 0){
-				document.getElementById("family").style.background = 'green';
-				document.getElementById("family").style.textTransform = 'uppercase';
+			else if (url.search("work") > 0){
+				document.getElementById("work").style.background = 'green';
+				document.getElementById("work").style.textTransform = 'uppercase';
 			}
 			else if (url.search("form") > 0){
 				document.getElementById("form").style.background = 'green';
 				document.getElementById("form").style.textTransform = 'uppercase';
+			}
+			else {
+				document.getElementById("index").style.background = 'green';
+				document.getElementById("index").style.textTransform = 'uppercase';
 			}
 		}
 	</script>
@@ -48,8 +49,8 @@
 		<nav>
 			<ul class = "nav nav-pill nav-justified">
 				<li><a id = "index" href = "index.html"> Home </a></li>
-				<li><a id = "dogs" href = "dogs.html"> Dogs </a></li>
-				<li><a id = "family" href = "family.html"> Family </a></li>
+				<li><a id = "aboutme" href = "aboutme.html"> About Me </a></li>
+				<li><a id = "work" href = "work.html"> Work </a></li>
 				<li><a id = "form" href = "form.html">Login</a></li>
 			</ul>
 		</nav>
@@ -61,6 +62,15 @@
 		<div class = "headerimg">
 			<img id="trees" src="static/trees.jpg" alt="trees with ocean in background">
 			<h1> Anna Scheppele</h1>
+		</div>
+
+		<div class = "medheaderimg">
+			<img id="lake" src="static/lake.jpg" alt="lake superior">
+			<h1> Anna Scheppele</h1>
+		</div>
+
+		<div class = "smallheader">
+			<h1>Anna Scheppele</h1>
 		</div>
 
 		{% block head %}

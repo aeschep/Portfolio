@@ -54,8 +54,8 @@ class FormHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/index.html', MainHandler),
-    ('/family.html', MainHandler),
-    ('/dogs.html', MainHandler),
+    ('/work.html', MainHandler),
+    ('/aboutme.html', MainHandler),
     ('/form.html', FormHandler),
     ('/login.html', FormHandler)
 ], debug=True)
