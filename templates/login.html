@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-
-	<form method="post" action="/loggedin.html">
+	<p class="formpara">{{fail}}</p>
+	<form method="post" action="/login.html">
 		<label>Email: <input type = "email" name = "email1" id = "e1"></label> <br/>
 		<label>Password: <input type = "password" name = "pw1" id = "pw1"></label> <br/>
 		<input type = "submit" value = "Login" id = "signup">
