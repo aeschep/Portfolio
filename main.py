@@ -28,25 +28,29 @@ class MainHandler(webapp2.RequestHandler):
 class FormHandler(webapp2.RequestHandler):
     #get method for when the page is first loaded
     def get(self):
-        logging.info("opening login page")
-        template = JINJA_ENVIRONMENT.get_template('templates/form.html')
-        self.response.write(template.render({'title': 'Login'}))
+        url = self.request.path
+        try:
+            template = JINJA_ENVIRONMENT.get_template('templates' + url)
+            self.response.write(template.render())
+        except:
+            template = JINJA_ENVIRONMENT.get_template('templates/index.html')
+            self.response.write(template.render())
 
     def post(self):
         #post method for when the form is submitted
         #saving the username and password as variables
-        name = self.request.get("name")
-        pw = self.request.get("pw")
+        name = self.request.get("email1")
+        pw = self.request.get("pw1")
         #if username and pass are correct, show login.html
-        if (name == "Colleen") and (pw == "pass"):
+        if (name == "Colleen@me.com") and (pw == "pass"):
             logging.info("successful login")
             template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-            self.response.write(template.render({'title': 'Logged in'}))
+            self.response.write(template.render())
         #if username and pass are incorrect, reload the form and show a fail message    
         else:
             logging.info("bad username: " + name + ", bad pass: " + pw)
             template = JINJA_ENVIRONMENT.get_template('templates/form.html')
-            self.response.write(template.render({'title': 'Login'}))
+            self.response.write(template.render())
 
 
 #creates the instances for webapp2

@@ -32,7 +32,7 @@
 				document.getElementById("work").style.background = 'green';
 				document.getElementById("work").style.textTransform = 'uppercase';
 			}
-			else if (url.search("form") > 0){
+			else if (url.search("form") > 0 || url.search("login") > 0){
 				document.getElementById("form").style.background = 'green';
 				document.getElementById("form").style.textTransform = 'uppercase';
 			}
@@ -50,7 +50,7 @@
 			<ul class = "nav nav-pill nav-justified">
 				<li><a id = "index" href = "index.html"> Home </a></li>
 				<li><a id = "aboutme" href = "aboutme.html"> About Me </a></li>
-				<li><a id = "work" href = "work.html"> Work </a></li>
+				<li><a id = "work" href = "work.html"> Resume </a></li>
 				<li><a id = "form" href = "form.html">Login</a></li>
 			</ul>
 		</nav>
@@ -81,7 +81,7 @@
 	{% block content %}
 	I should never see this content.  It should be replaced.
 	{% endblock %}
-	<footer> Copyright &copy; Anna Scheppele 2016.
+	<footer> <p>Copyright &copy; Anna Scheppele 2016 <a href="https://www.facebook.com/anna.scheppele"><img src="static/fblogo.jpg" alt="facebook logo"></a></p> 
 	</footer>
 
 

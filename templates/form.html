@@ -1,14 +1,18 @@
 {% extends "templates/base.html" %}
 
 {% block head %}
-<h2>Login</h2>
+<h2>Sign Up</h2>
 {% endblock %}
 
 {% block content %}
 {{fail}}
 <form method="post" action="/login.html">
-	<label>username: <input type = "text" name = "name"></label>
-	<label>password: <input type = "password" name = "pw"></label>
-	<input type = "submit" value = "login">
+	<label>Email: <input type = "email" name = "email1" id = "e1"></label> <br/>
+	<label>Confirm Email: <input type = "email" name = "email2" id = "e2"></label> <br/>
+	<label>Password: <input type = "password" name = "pw1" id = "pw1"></label> <br/>
+	<label>Confirm Password: <input type = "password" name = "pw2" id = "pw2"></label> <br/>
+	<input type = "submit" value = "Sign Up" id = "signup">
 </form>
+
+<p>If you have already signed up and want to login, click <a href="login.html"><button>here</button></a></p>
 {%endblock%}
