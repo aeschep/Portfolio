@@ -2,7 +2,7 @@ function check(e){
 
 	if (e.e1.value == e.e2.value){
 		if (e.pw1.value == e.pw2.value){
-			return true
+			return true;
 		}
 	}
 	else{

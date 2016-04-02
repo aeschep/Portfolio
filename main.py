@@ -68,10 +68,9 @@ class FormHandler(webapp2.RequestHandler):
             logging.info("saving email " + email + " and password " + pw)
 
             #sending an email confirming signing up to the user
-            sender_email = "annascheppele@appname.appspotmail.com"
+            sender_email = "aeschep@umich.edu"
             subject = "Thank you for signing up on Anna Scheppele's Portfolio!"
-            body = """Thank you for signing up and making an account! 
-            There is no extra functionality for creating an account on my website, but it allows me to practice sending emails!"""
+            body = """Thank you for signing up and making an account! There is no extra functionality for creating an account on my website, but it allows me to practice sending emails! Unfortunately, I couldn't get my site to save sign up data, so you cannot log in with the information you just provided."""
             mail.send_mail(sender_email, email, subject, body)
             #load the logged in page
             template = JINJA_ENVIRONMENT.get_template('templates/loggedin.html')
