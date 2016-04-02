@@ -60,6 +60,16 @@ button{
 	margin-left: 15px;
 }
 
+.aboutme{
+	margin: 15px;
+}
+
+.aboutme img{
+	width: 50%;
+	margin-left: 25%;
+}
+
+
 footer {
 	background-color: green;
 	border: 2px solid black;
@@ -142,6 +152,27 @@ footer img{
 		height: 40em;
 	}
 
+	.aboutme p{
+		margin-left: 15%;
+	}
+
+	.aboutme img{
+		width: 30%;
+		margin-left: 0;
+	}
+
+
+}
+
+@media all and (min-width: 1000px){
+	#pic1, #pic2{
+		margin-top: 4vw;
+	}
+
+	#pic3{
+		margin-top: 7vw;
+	}
+
 }
 
 @media all and (min-width: 1200px){
@@ -182,6 +213,18 @@ footer img{
 
 	.resume{
 		height: 60em;
+	}
+
+	#pic1, #pic2{
+		margin-top: 8vw;
+	}
+
+	#pic3{
+		margin-top: 12vw;
+	}
+
+	#pic4, #pic5{
+		margin-top: 2vw;
 	}
 }
 
