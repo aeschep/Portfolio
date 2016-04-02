@@ -1,6 +1,7 @@
 body{
 	background-color: #B8B7B3;
 	color: black;
+	overflow-x: hidden;
 }
 
 .headerimg{
@@ -67,6 +68,27 @@ button{
 .aboutme img{
 	width: 50%;
 	margin-left: 25%;
+}
+
+.otherpics img{
+	width: 51%;
+	margin-left: 25%;
+	margin-bottom: 5%;
+}
+
+.rotatediv{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#lighthouse{
+	margin-bottom: 15%;
+}
+
+.rotate{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }
 
 
@@ -161,6 +183,26 @@ footer img{
 		margin-left: 0;
 	}
 
+	.otherpics img{
+		width: 36%;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+
+	.otherpics{
+		margin-left: 23%;
+	}
+
+	.rotatediv{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+
+	#lighthouse{
+		margin-bottom: 0;
+	}
+
+	
 
 }
 
