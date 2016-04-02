@@ -68,7 +68,7 @@ class FormHandler(webapp2.RequestHandler):
             logging.info("saving email " + email + " and password " + pw)
 
             #sending an email confirming signing up to the user
-            sender_email = "templates-1211@appname.appspotmail.com"
+            sender_email = "annascheppele@appname.appspotmail.com"
             subject = "Thank you for signing up on Anna Scheppele's Portfolio!"
             body = """Thank you for signing up and making an account! 
             There is no extra functionality for creating an account on my website, but it allows me to practice sending emails!"""
